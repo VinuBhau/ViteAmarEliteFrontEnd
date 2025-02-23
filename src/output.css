@@ -1,0 +1,76 @@
+/* AdminDashboard.css */
+/* Apply full height and background gradient */
+.dashboard-container {
+    min-height: 100vh; /* Equivalent to min-h-screen */
+    background: linear-gradient(to bottom, #60a5fa, #4f46e5); /* Equivalent to bg-gradient-to-b from-blue-400 to-indigo-600 */
+    padding: 40px 24px; /* Equivalent to px-6 py-10 */
+  }
+  
+  
+  .dashboard-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .nav-button {
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    background: #1e40af;
+    transform: scale(1.05);
+  }
+  
+  /* Logout Button */
+  .logout-button {
+    padding: 12px 20px;
+    background: #ef4444;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .logout-button:hover {
+    background: #b91c1c;
+    transform: scale(1.05);
+  }
+  
+  /* Content Container */
+  .dashboard-content {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
