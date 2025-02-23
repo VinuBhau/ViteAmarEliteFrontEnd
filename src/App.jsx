@@ -17,7 +17,16 @@ function App() {
       <Route path = '/' element ={<Home/>}/>
       <Route path = '/login' element = {<LoginPage/>}/>
       <Route path = '/test' element = {<Test/>}/>
-      {/* <Route path = '/adminDashboard' element ={<AdminDashboard/>}/>
+      <Route path = '/adminDashboard' element ={<AdminDashboard/>}/>
+      <Route path = '/add-employee' element ={<AddEmployee/>}/>
+      <Route path = '/financial-expenses' element ={<FinancialExpenses/>}/>
+      <Route path = '/financial-year' element ={<FinancialYear/>}/>
+      <Route path = '/add-apartment' element ={<AddApartmentDetails/>}/>
+      <Route path = '/add-owner' element ={<AddOwner/>}/>
+
+
+
+      {/*
       <Route path = '/chairman' element ={<Chairman/>}/>
       <Route path = '/secretary' element ={<Secretary/>}/>
       <Route path = '/owner' element ={<Owner/>}/>
@@ -25,11 +34,8 @@ function App() {
       <Route path = '/contact' element ={<Contact/>}/>
       <Route path = '/information' element ={<Information/>}/>
       <Route path = '/about' element ={<About/>}/>
-      {/* <Route path = '/add-flat-owner' element ={<AddFlatOwner/>}/>
-      <Route path = '/add-employee' element ={<AddEmployee/>}/>
-      <Route path = '/financial-year' element ={<Financialdata/>}/>
-      <Route path = '/add-apartment' element ={<AddApartmentDetails/>}/>
-      <Route path = '/financial-expenses' element ={<FinancialExpenses/>}/>  */}
+      <Route path = '/add-flat-owner' element ={<AddFlatOwner/>}/>
+     
 
 
     </Routes>
