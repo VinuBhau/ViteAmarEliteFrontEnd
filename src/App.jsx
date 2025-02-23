@@ -7,6 +7,13 @@ import Test from './Components/test'
 import Contact from './Components/Contact'
 import Information from './Components/Information'
 import About from './Components/About'
+import AddFlatOwner from './Components/AddFlatOwner'
+import AdminDashboard from './Components/AdminDashboard'
+import AddEmployee from './Components/AddEmployee'
+import FinancialExpenses from './Components/FinancialExpenses'
+import FinancialYear from './Components/FinancialYear'
+import AddApartmentDetails from './Components/AddApartmentDetails'
+import AddOwner from './Components/AddOwner'
 function App() {
 
 
