@@ -43,7 +43,7 @@ const Home = () => {
         </button>
         {/* Desktop Navigation */}
         <div className="hidden lg:flex space-x-8 text-lg font-medium">
-          <Link to="/test" className="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
+          <Link to="/" className="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
             <FaHome className="h-5 w-5" />
             <span>Home</span>
           </Link>
@@ -66,10 +66,11 @@ const Home = () => {
         </div>
       </div>
 
+
       {/* Mobile Dropdown Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden bg-gray-700 text-white p-4 space-y-4">
-          <Link to="/test" className=" text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
+          <Link to="/" className=" text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
             <FaHome className="h-5 w-5" />
             <span>Home</span>
           </Link>
@@ -93,15 +94,18 @@ const Home = () => {
       )}
     </nav>
 
+      <Test/>
     {/* Main Content */}
     <div className="flex-grow p-8 bg-gray-100">
       <Routes>
-        <Route path="/test" element={<Test />} />
+        
         <Route path="/about" element={<About />} />
         <Route path="/information" element={<Information />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
+
+   
 
     {/* Footer */}
     <footer className="bg-gray-800 text-center py-6 mt-8">
