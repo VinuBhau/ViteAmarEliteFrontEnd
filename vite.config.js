@@ -6,11 +6,16 @@ export default defineConfig({
   plugins: [react(),tailwindcss()],
 
   server: {
-    host: '0.0.0.0',  // Bind to all network interfaces
-    port: process.env.PORT || 3000,  // Use Render's provided port or default to 3000
-    strictPort: true,  // Ensures Vite only runs on the specified port
-    allowedHosts: ['https://viteamarelitefrontend.onrender.com'],
+  host: '0.0.0.0',
+  port: process.env.PORT || 3000,
+  strictPort: true,
+  allowedHosts: ['viteamarelitefrontend.onrender.com'],
+  cors: true,
+  hmr: {
+    host: 'viteamarelitefrontend.onrender.com',
+    protocol: 'wss' // WebSockets over SSL
   }
-  
+}
+
 
 })
