@@ -29,7 +29,7 @@ const AdminDashboard = () => {
                 { path: "/add-employee", text: "Add Employee" },
                 { path: "/financial-year", text: "Set Financial Year" },
                 { path: "/add-apartment", text: "Add Apartment" },
-                { path: "/financial-expenses", text: "Financial Expenses" },
+                { path: "/adminDashboard", text: "Financial Expenses" },
               ].map((item) => (
                 <Link key={item.path} to={item.path} className="nav-button">
                   {item.text}
@@ -42,17 +42,11 @@ const AdminDashboard = () => {
               </button>
             </div>
           </nav>
-    
-          {/* Dashboard Routes */}
-          <div className="dashboard-content">
-            <Routes>
-              <Route path="/add-owner" element={<AddOwner />} />
-              <Route path="/add-employee" element={<AddEmployee />} />
-              <Route path="/add-apartment" element={<AddApartmentDetails />} />
-              <Route path="/financial-expenses" element={<FinancialExpenses />} />
-              <Route path="/financial-year" element={<FinancialYear />} />
-            </Routes>
-          </div>
+
+          <FinancialExpenses/>
+
+        
+        
         </div>
       
   )
