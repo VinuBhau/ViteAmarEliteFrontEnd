@@ -27,7 +27,7 @@ const UpdateFlatOwner = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen ">
+    <div className="h-screen w-screen flex justify-center items-center min-h-screen ">
     <div className="bg-white shadow-2xl rounded-xl p-8 sm:p-10 max-w-2xl w-full m-4">
       <h2 className="text-black text-xl font-bold mb-4 text-center">
         Update Flat Owner

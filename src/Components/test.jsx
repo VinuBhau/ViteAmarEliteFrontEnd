@@ -59,7 +59,7 @@ const test = () => {
 
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
+    <div className="bg-gray-900 h-screen w-screen text-white min-h-screen">
       
     {/* Header Section */}
     <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16">

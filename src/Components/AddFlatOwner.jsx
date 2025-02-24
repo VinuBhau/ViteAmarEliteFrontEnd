@@ -32,11 +32,11 @@ const AddFlatOwner = () => {
   
 
   return (
-    <div className="max-w-lg mx-auto bg-gradient-to-r from-blue-500 to-blue-700 p-8 rounded-lg shadow-md">
+    <div className="max-w-lg mt-36 mx-auto bg-gradient-to-r from-blue-500 to-blue-700 p-8 rounded-lg shadow-md">
     <h2 className="text-white text-2xl font-bold mb-6 text-center">
       Add Flat Owner
     </h2>
-    <div className="space-y-5">
+    <div className="space-y-5 ">
       {/* Owner Name Input */}
       <div className="relative">
         <input

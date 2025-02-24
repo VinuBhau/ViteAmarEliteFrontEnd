@@ -20,7 +20,7 @@ const Information = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex flex-col justify-between">
+    <div className="h-screen w-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 flex flex-col justify-between">
     <main className="flex-grow flex justify-center items-center px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl p-4 sm:p-6 bg-white shadow-lg rounded-lg">
         <h1 className="text-2xl sm:text-3xl font-extrabold text-teal-600 text-center mb-6">

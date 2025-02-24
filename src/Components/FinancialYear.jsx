@@ -41,56 +41,71 @@ const FinancialYear = () => {
 
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100 relative">
-    {/* Decorative Background Pattern */}
-    <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute top-0 left-0 w-32 h-32 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-48 h-48 bg-blue-600 opacity-20 rounded-full blur-3xl"></div>
-    </div>
+<div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-blue-100 relative px-4 sm:px-6 lg:px-8">
+  {/* Decorative Background Pattern */}
+  <div className="absolute inset-0 overflow-hidden">
+    <div className="absolute top-0 left-0 w-32 h-32 bg-blue-400 opacity-20 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-0 right-0 w-48 h-48 bg-blue-600 opacity-20 rounded-full blur-3xl"></div>
+  </div>
 
-    {/* Main Card */}
-    <div className="relative bg-white shadow-lg rounded-lg p-8 w-full max-w-md z-10">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center space-x-3">
+  {/* Responsive Container */}
+  <div className="relative flex flex-col lg:flex-row items-center justify-center gap-6 w-full max-w-4xl z-10">
+    
+    {/* Set Financial Year Card */}
+    <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center space-x-3">
         <FaCalendarAlt className="text-blue-500" />
         <span>Set Financial Year</span>
       </h2>
 
-      {/* Input Section */}
+      {/* Input Field */}
       <div className="mb-4">
-        <label
-          htmlFor="financialyear"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        >
+        <label htmlFor="financialyear" className="block text-sm font-medium text-gray-700 mb-2">
           Financial Year
         </label>
-        <div className="relative">
-          <input
-            ref={financialyear}
-            id="financialyear"
-            placeholder="Enter Financial Year"
-            className="block w-full px-4 py-2 pl-10 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700"
-          />
-          {/* <FaCalendarAlt className="absolute left-3 top-2.5 text-gray-400" /> */}
-        </div>
+        <input
+          ref={financialyear}
+          id="financialyear"
+          placeholder="Enter Financial Year"
+          className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700"
+        />
       </div>
 
       {/* Submit Button */}
       <button
         onClick={setFinancialYear}
-        className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none flex items-center justify-center space-x-2"
+        className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 focus:ring-2 focus:ring-blue-500 flex items-center justify-center space-x-2"
       >
         <FaCalendarAlt className="text-white" />
         <span>Set Financial Year</span>
       </button>
     </div>
-    <div className="relative bg-white shadow-lg rounded-lg p-8 w-full max-w-md z-10">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center space-x-3">Set Maintainence Amount</h2>
-      <input type='text' className="block w-full px-4 py-2 pl-10 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700"
-        ref={annualmaintainence} placeholder='Enter maintainence amount'></input>
-      <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none flex items-center justify-center space-x-2"
-        onClick={setmaintainenceamount}>Set Maintainence Amount</button>
+
+    {/* Set Maintenance Amount Card */}
+    <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 flex items-center space-x-3">
+        <span>Set Maintenance Amount</span>
+      </h2>
+
+      {/* Input Field */}
+      <input
+        type="text"
+        className="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-gray-700 mb-4"
+        ref={annualmaintainence}
+        placeholder="Enter maintenance amount"
+      />
+
+      {/* Submit Button */}
+      <button
+        onClick={setmaintainenceamount}
+        className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:from-blue-600 hover:to-blue-700 focus:ring-2 focus:ring-blue-500 flex items-center justify-center space-x-2"
+      >
+        <span>Set Maintenance Amount</span>
+      </button>
     </div>
   </div>
+</div>
+
   )
 }
 

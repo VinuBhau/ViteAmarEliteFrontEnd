@@ -8,15 +8,23 @@ const LoginPage = () => {
     const [formData, setFormData] = useState({
         username: "",
         password: "",
-        userType: "Admin",
+        userType: "",
       });
       const [message, setMessage] = useState("");
       const [isLoading, setIsLoading] = useState(false);
       const [showPassword, setShowPassword] = useState(false);
     
-      const [Username,setUsername] = useState("");
-      const [UserType,setUserType] = useState("");
-      const [Oid,setOid] = useState("");
+      
+
+      const userTypes = [
+        { value: "Admin", label: "Administrator" },
+        { value: "Chairman", label: "Chairman" },
+        { value: "Secretary", label: "Secretary" },
+        { value: "Owner", label: "Property Owner" },
+        { value: "Security", label: "Security Staff" },
+      ];
+
+
     
       const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,13 +33,15 @@ const LoginPage = () => {
       };
     
       const handleSubmit = async (e) => {
-        alert("inside handle submit")
+
         e.preventDefault();
-        setIsLoading(true);
-        setMessage("");
-        setUsername(formData.username);
+        
+        
     
         try {
+          
+          setIsLoading(true);
+          setMessage("");
           const response = await fetch("https://amarelitebackend.onrender.com/api/login/authenticate", {
             method: 'POST',
             headers: {
@@ -39,15 +49,29 @@ const LoginPage = () => {
             },
             body: JSON.stringify(formData),
           });
+
     
           const data = await response.json();
+          console.log(data)
           if (response.ok) {
-            setMessage(data.message);
-            setUserType(data.userType);
-            setOid(data.oid)
-            setUsername(data.ofname + " " + data.olname)
+
     
-            window.location.href = "/adminDashboard";
+            if(formData.userType === "Admin")
+              window.location.href = "/adminDashboard";
+            else
+            if(formData.userType === "Chairman")
+              window.location.href = "/chairman";
+            else
+            if(formData.userType === "Secretary")
+              window.location.href = "/secretary";
+            else
+            if(formData.userType === "Owner")
+              window.location.href = "/owner";
+            else
+            if(formData.userType === "Security")
+              window.location.href = "/security";
+            
+
             
           } else {
             throw new Error(data.message || "Login failed");
@@ -59,18 +83,11 @@ const LoginPage = () => {
         }
       };
     
-      const userTypes = [
-        { value: "Admin", label: "Administrator" },
-        { value: "Chairman", label: "Chairman" },
-        { value: "Secretary", label: "Secretary" },
-        { value: "Owner", label: "Property Owner" },
-        { value: "Security", label: "Security Staff" },
-      ];
-
+     
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 p-4">
-    <div className="w-full max-w-md">
+<div className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 p-4">
+  <div className="w-full max-w-md">
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform transition-all hover:shadow-2xl">
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6">
           <h2 className="text-3xl font-bold text-white text-center">

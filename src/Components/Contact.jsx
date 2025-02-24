@@ -35,7 +35,7 @@ const Contact = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 py-16">
+    <div className="h-screen w-screen bg-gradient-to-br from-blue-50 via-white to-teal-50 py-16">
       {/* Enhanced Header Section */}
       <div className="text-center mb-16 px-4">
   <h1 className="text-5xl font-semibold text-gray-800 mb-4 tracking-tight">Contact Us</h1>

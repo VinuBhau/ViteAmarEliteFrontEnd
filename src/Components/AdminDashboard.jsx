@@ -17,7 +17,7 @@ const AdminDashboard = () => {
 
   return (
    
-        <div className="dashboard-container">
+        <div className="dashboard-container ">
           {/* Heading */}
           <h1 className="dashboard-title">Admin Dashboard</h1>
     

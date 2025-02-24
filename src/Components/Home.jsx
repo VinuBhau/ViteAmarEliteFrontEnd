@@ -27,7 +27,7 @@ const Home = () => {
 
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-900 text-white">
+    <div className="h-screen w-screen  flex flex-col bg-gray-900 text-white">
     {/* Navbar */}
     <nav className="bg-gray-800 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-8">
@@ -94,25 +94,12 @@ const Home = () => {
       )}
     </nav>
 
-      <Test/>
-    {/* Main Content */}
-    <div className="flex-grow p-8 bg-gray-100">
-      <Routes>
+      
+    <Test/>
         
-        <Route path="/about" element={<About />} />
-        <Route path="/information" element={<Information />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </div>
+ 
 
-   
-
-    {/* Footer */}
-    <footer className="bg-gray-800 text-center py-6 mt-8">
-      <p className="text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} {apartmentName}. All rights reserved.
-      </p>
-    </footer>
+    
   </div>
   )
 }
