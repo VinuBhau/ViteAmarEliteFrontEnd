@@ -5,17 +5,19 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react(),tailwindcss()],
 
-  server: {
+ server: {
   host: '0.0.0.0',
   port: process.env.PORT || 3000,
   strictPort: true,
-  allowedHosts: ['viteamarelitefrontend.onrender.com'],
+  allowedHosts: ['viteamarelitefrontend.onrender.com', 'www.aeowa.in'], // Add your domain here
   cors: true,
   hmr: {
     host: 'viteamarelitefrontend.onrender.com',
     protocol: 'wss' // WebSockets over SSL
   }
 }
+
+  
 
 
 })
