@@ -24,6 +24,12 @@ import MakeEmpSalary from './Components/MakeEmpSalary'
 import RaiseDemand from './Components/RaiseDemand'
 import ViewComplaints from './Components/ViewComplaints'
 import PaymentDue from './Components/PaymentDue'
+import Financialdata from './Components/FinancialData'
+import Complaint from './Components/Complaint'
+import OwnerServices from './Components/OwnerServices'
+import TempDisplay from './Components/TempDisplay'
+import GasSensorInfo from './Components/GasSensorInfo'
+import OwnerPayment from './Components/OwnerPayment'
 function App() {
 
 
@@ -54,6 +60,18 @@ function App() {
       <Route path = '/raise-demand' element ={<RaiseDemand/>}/>
       <Route path = '/view-lodgedcomplaints' element ={<ViewComplaints/>}/>
       <Route path = '/view-paymentdues' element ={<PaymentDue/>}/>
+      <Route path = '/financial-data' element ={<Financialdata/>}/>
+      <Route path = '/lodge-complaint' element ={<Complaint/>}/>
+      <Route path = '/ownerServices' element ={<OwnerServices/>}/>
+      <Route path = '/view-temp' element ={<TempDisplay/>}/>
+      <Route path = '/gas-info' element ={<GasSensorInfo/>}/>
+      <Route path = '/pay-maintainence' element ={<OwnerPayment/>}/>
+
+
+      
+
+
+
 
 
     </Routes>
