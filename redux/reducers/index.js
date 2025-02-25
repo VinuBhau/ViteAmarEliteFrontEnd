@@ -1,26 +1,29 @@
 import { combineReducers } from 'redux';
-import { SET_OID } from '../actions/index';
+import {
+  
+    SET_OID,
+} from '../actions/index';
 
 // Initial state for each value
 const initialState = {
-  oid: null, // The initial value of 'oid'
+
+    oid : 0
 };
 
-// Reducer for 'oid'
-const OidReducer = (state = initialState, action) => {
+
+
+const OidReducer = (state = initialState.oid, action) => {
   switch (action.type) {
     case SET_OID:
-      return {
-        ...state, // Spread the existing state
-        oid: action.payload, // Update 'oid' with the action's payload
-      };
+      return action.payload;
     default:
-      return state; // Return the current state if no matching action type
+      return state;
   }
 };
 
-// Combine reducers (you can add other reducers here in the future)
+// Combine reducers
 const rootReducer = combineReducers({
+ 
   oid: OidReducer,
 });
 
