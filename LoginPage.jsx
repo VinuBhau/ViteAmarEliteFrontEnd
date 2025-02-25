@@ -2,21 +2,39 @@
 
 import React, { useState } from "react";
 import { Eye, EyeOff, LogIn } from "lucide-react";
+import { useDispatch, useSelector } from 'react-redux';
+import {  setOid } from '../redux/actions/index';
 
 const LoginPage = () => {
+
+    const dispatch = useDispatch()
+
+    const { oid } = useSelector(state => ({
+      oid: state.oid,
+      
+    }));
+  
 
     const [formData, setFormData] = useState({
         username: "",
         password: "",
-        userType: "Admin",
+        userType: "",
       });
       const [message, setMessage] = useState("");
       const [isLoading, setIsLoading] = useState(false);
       const [showPassword, setShowPassword] = useState(false);
     
-      const [Username,setUsername] = useState("");
-      const [UserType,setUserType] = useState("");
-      const [Oid,setOid] = useState("");
+      
+
+      const userTypes = [
+        { value: "Admin", label: "Administrator" },
+        { value: "Chairman", label: "Chairman" },
+        { value: "Secretary", label: "Secretary" },
+        { value: "Owner", label: "Property Owner" },
+        { value: "Security", label: "Security Staff" },
+      ];
+
+
     
       const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,13 +43,17 @@ const LoginPage = () => {
       };
     
       const handleSubmit = async (e) => {
-        alert("inside handle submit")
+
+        dispatch(setOid(formData.username))
+
         e.preventDefault();
-        setIsLoading(true);
-        setMessage("");
-        setUsername(formData.username);
+        
+        
     
         try {
+          
+          setIsLoading(true);
+          setMessage("");
           const response = await fetch("https://amarelitebackend.onrender.com/api/login/authenticate", {
             method: 'POST',
             headers: {
@@ -39,15 +61,29 @@ const LoginPage = () => {
             },
             body: JSON.stringify(formData),
           });
+
     
           const data = await response.json();
+          console.log(data)
           if (response.ok) {
-            setMessage(data.message);
-            setUserType(data.userType);
-            setOid(data.oid)
-            setUsername(data.ofname + " " + data.olname)
+
     
-            window.location.href = "/adminDashboard";
+            if(formData.userType === "Admin")
+              window.location.href = "/adminDashboard";
+            else
+            if(formData.userType === "Chairman")
+              window.location.href = "/chairman";
+            else
+            if(formData.userType === "Secretary")
+              window.location.href = "/secretary";
+            else
+            if(formData.userType === "Owner")
+              window.location.href = "/owner";
+            else
+            if(formData.userType === "Security")
+              window.location.href = "/security";
+            
+
             
           } else {
             throw new Error(data.message || "Login failed");
@@ -59,14 +95,7 @@ const LoginPage = () => {
         }
       };
     
-      const userTypes = [
-        { value: "Admin", label: "Administrator" },
-        { value: "Chairman", label: "Chairman" },
-        { value: "Secretary", label: "Secretary" },
-        { value: "Owner", label: "Property Owner" },
-        { value: "Security", label: "Security Staff" },
-      ];
-
+     
 
   return (
 <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 p-4">
