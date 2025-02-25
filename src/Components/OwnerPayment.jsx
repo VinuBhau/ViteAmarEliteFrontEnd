@@ -1,9 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
-import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux';
+
+  
 
 const OwnerPayment =()=> {
 
+    const oid = useSelector((state)=>state.oid)
+
+  
+    // const Oid = dispatch(setOid((state)))
     const [owners, setOwners] = useState([])
     const paymentdate = useRef("")
     const amount = useRef("")
@@ -20,7 +27,10 @@ const OwnerPayment =()=> {
                 console.log(error)
             })
     }, [owners])
-    const makepayment = (oid) => {
+    const makepayment = () => {
+
+        alert(oid)
+        
         let paymentdate1 = paymentdate.current.value
         let amount1 = amount.current.value
         let year1 = year.current.value
@@ -125,7 +135,7 @@ const OwnerPayment =()=> {
                                                                 padding: '5px 10px',
                                                                 cursor: 'pointer',
                                                             }}
-                                                            onClick={() => makepayment(owner.oid)}
+                                                            onClick={() => makepayment()}
                                                         >
                                                             Pay Maintenance
                                                         </button>
