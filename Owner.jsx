@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Owner = () => {
   return (
     <div>
-      <nav className="navbar" style={{  backgroundColor: '#2d3748', padding: '1rem',borderRadius:'0' }}>
+      <nav className="navbar" style={{ backgroundColor: '#2d3748', padding: '1rem', borderRadius: '0' }}>
         <div 
           className="navbar-container" 
           style={{
@@ -58,12 +58,10 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-         
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
-                    
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   View Expenses
@@ -77,11 +75,10 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-              
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   Lodge Complaint
@@ -95,11 +92,10 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-     
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   Owner Services
@@ -115,8 +111,8 @@ const Owner = () => {
                     textDecoration: 'none', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   Pay Maintenance
@@ -132,8 +128,8 @@ const Owner = () => {
                     textDecoration: 'none', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   Expense Graphic View
@@ -149,8 +145,8 @@ const Owner = () => {
                     textDecoration: 'none', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   View Temperature
@@ -166,8 +162,8 @@ const Owner = () => {
                     textDecoration: 'none', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
-                    backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
-                    color: '#fbbf24'
+                    backgroundColor: '#4a5568', 
+                    color: '#fbbf24' // Only set color and backgroundColor once
                   }}
                 >
                   View Gas Info
