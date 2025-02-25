@@ -3,7 +3,7 @@ import { SET_OID } from '../actions/index';
 
 // Initial state for each value
 const initialState = {
-  oid: 0, // The initial value of 'oid'
+  oid: null, // The initial value of 'oid'
 };
 
 // Reducer for 'oid'
