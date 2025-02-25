@@ -58,7 +58,7 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
+         
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
@@ -77,7 +77,7 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
+              
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
@@ -95,7 +95,7 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
+     
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
@@ -113,7 +113,6 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
@@ -131,7 +130,6 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
@@ -149,7 +147,6 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
@@ -167,7 +164,6 @@ const Owner = () => {
                     padding: '0.5rem 1rem', 
                     borderRadius: '0.375rem', 
                     textDecoration: 'none', 
-                    color: 'white', 
                     transition: 'background-color 0.2s ease, color 0.2s ease',
                     display: 'block',
                     backgroundColor: '#4a5568', /* Tailwind's hover:bg-gray-700 */
